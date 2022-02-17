@@ -15,6 +15,6 @@ Prêt à dépenser décide donc de développer un dashboard interactif pour que 
 5. Déployement de l'API et du Dashboard avec Heroku
 
 # Livrables : 
-## API: 
-* Exemple d'un client sans défaut : https://creditprediction.herokuapp.com/credit/196543
-* Exemple d'un client en défaut : https://creditprediction.herokuapp.com/credit/116776
+## Dashboard: https://dshprediction.herokuapp.com/
+* Exemple d'un identifiant client sans défaut : 196543
+* Exemple d'un identifiant client en défaut : 116776
