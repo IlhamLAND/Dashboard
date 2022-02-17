@@ -43,8 +43,8 @@ def main():
 
 
     elif (int(id_input) in liste_id):
-        API_url = "http://127.0.0.1:5000/credit/" + str(id_input)
-        # API_url = "https://creditprediction.herokuapp.com/credit/"+str(id_input)
+        #API_url = "http://127.0.0.1:5000/credit/" + str(id_input)
+        API_url = "https://creditprediction.herokuapp.com/credit/"+str(id_input)
         with st.spinner('Chargement du score du client...'):
             json_url = urlopen(API_url)
             API_data = json.loads(json_url.read())
