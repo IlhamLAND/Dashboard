@@ -124,11 +124,15 @@ def main():
             # Exploration des caractéristiques du client :
             df_original['Target'] = y
             st.subheader('Exploration des caractéristiques du client/des clients')
-            select_box = st.multiselect(label='Features', options=df_original.columns)
-            if len(select_box)!= 0 :
-                fig2 =  px.histogram(df_original, x= df_original[select_box[0]], color='Target')
-                fig2.add_vline(x=X1[select_box[0]].values[0], line_width=3, line_color="green")
-                st.plotly_chart(fig2)
+            container = st.container()
+            select_box = container.multiselect(label='Features', options=df_original.columns)
+            if len(select_box)!=0 :
+                for i in range(0, len(select_box)):
+                    figi = px.histogram(df_original, x=df_original[select_box[i]], color='Target' , text_auto=True)
+                    figi.add_vline(x=X1[select_box[i]].values[0], line_width=3, line_color="green")
+                    st.plotly_chart(figi)
+            
+
                 
 
             # Analyse bivariée des caractéristiques des clients :
