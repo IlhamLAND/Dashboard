@@ -128,7 +128,7 @@ def main():
             select_box = container.multiselect(label='Features', options=df_original.columns)
             if len(select_box)!=0 :
                 for i in range(0, len(select_box)):
-                    figi = px.histogram(df_original, x=df_original[select_box[i]], color='Target' , text_auto=True)
+                    figi = px.histogram(df_original, x=df_original[select_box[i]], color='Target')
                     figi.add_vline(x=X1[select_box[i]].values[0], line_width=3, line_color="green")
                     st.plotly_chart(figi)
             
